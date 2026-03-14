@@ -1,0 +1,24 @@
+.hero-img img{
+  width:600px;   /* controls the displayed size */
+  border-radius:30px;
+  animation:float 5s ease-in-out infinite;
+  box-shadow:0 15px 40px rgba(0,0,0,0.8);
+}
+.hero-img img{
+  width:600px;
+  max-width:100%;
+}
+header, .hero{
+    position:relative;
+    z-index:2;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-image: url("back.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

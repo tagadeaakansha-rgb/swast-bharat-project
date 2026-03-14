@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard - Swast Bharat</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="back.jpg">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Segoe UI, sans-serif;}
+body{
+  height:100vh;
+  background:#141d45;
+  color:white;
+  overflow-x:hidden;
+  perspective:1200px;
+}
+
+
+/* Moving background shapes */
+.bg-shape{
+  position:absolute;
+  border-radius:50%;
+  opacity:0.08;
+  animation:move 12s linear infinite;
+}
+.bg-shape:nth-child(1){width:250px;height:250px;background:#0b1c45;top:10%;left:15%;animation-duration:12s;}
+.bg-shape:nth-child(2){width:180px;height:180px;background:#0d2a66;top:50%;left:70%;animation-duration:15s;}
+.bg-shape:nth-child(3){width:120px;height:120px;background:#05132f;top:80%;left:40%;animation-duration:18s;}
+
+@keyframes move{
+  0%{transform:translateY(0) translateX(0);}
+  50%{transform:translateY(-30px) translateX(20px);}
+  100%{transform:translateY(0) translateX(0);}
+}
+
+/* Header */
+header{
+  padding:20px 50px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:relative;
+  z-index:2;
+}
+header h2{color:#1e90ff;}
+header nav ul{
+  list-style:none;
+  display:flex;
+  gap:20px;
+}
+header nav li{
+  cursor:pointer;
+  transition:0.3s;
+}
+header nav li:hover{color:#63b3ff;}
+
+/* Dashboard cards */
+.dashboard{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:40px;
+  padding:80px 20px;
+  position:relative;
+  z-index:2;
+}
+.card{
+  background: rgba(0, 0, 0, 0.7); /* dark overlay */
+  backdrop-filter: blur(10px);   /* optional blur effect */
+  padding:40px 30px;
+  width:250px;
+  border-radius:25px;
+  text-align:center;
+  transition:0.4s;
+  box-shadow:0 15px 40px rgba(0,0,0,0.7);
+  cursor:pointer;
+  animation:float 5s ease-in-out infinite;
+}
+.card:hover{
+  transform: translateY(-15px) scale(1.05) rotateY(5deg);
+  background: rgba(10,10,50,0.9);
+  box-shadow:0 0 25px #1e90ff;
+}
+.card h3{
+  color:#1e90ff;
+  margin-bottom:15px;
+  text-shadow:0 0 5px #1e90ff;
+}
+.card p{
+  font-size:16px;
+  color:#cce0ff;
+}
+
+/* Floating animation */
+@keyframes float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  background:#05050a;
+  position:relative;
+  z-index:2;
+}
+</style>
+</head>
+<body>
+    <body style="background-image:url('back.jpg'); background-size:cover;"></body>
+    <!-- Background Image -->
+<div class="background-image"></div>
+
+<!-- Background shapes -->
+<div class="bg-shape"></div>
+<div class="bg-shape"></div>
+<div class="bg-shape"></div>
+
+<header>
+<h2>Swast Bharat</h2>
+<nav>
+<ul>
+<li onclick="window.location.href='register.html'">Register</li>
+<li onclick="window.location.href='login.html'">Login</li>
+<li>Dashboard</li>
+</ul>
+</nav>
+</header>
+
+<section class="dashboard">
+<div class="card" onclick="alert('Video Consultation Clicked')">
+<img src="c:\Users\hp\Downloads\doctor.jpg" alt="Video Consultation" width="100">
+<h3>Video Consultation</h3>
+<p>Connect with a doctor via live video.</p>
+</div>
+<div class="card" onclick="alert('Chatbox Consultation Clicked')">
+<img src="c:\Users\hp\Downloads\chatbox.jpg" alt="Chatbox Consultation" width="100">
+<h3>Chatbox Consultation</h3>
+<p>Ask health questions instantly via chat.</p>
+</div>
+<div class="card" onclick="alert('Ambulance Request Clicked')">
+<img src="c:\Users\hp\Downloads\ambulance-car-on-blue-background-medical-evacuation-ambulance-emergency-first-aid-vector-illustration-2CBCW1K.jpg" alt="Ambulance Request" width="100">
+<h3>Ambulance</h3>
+<p>Request emergency ambulance service.</p>
+</div>
+<div class="card" onclick="alert('Medicine Requirement Clicked')">
+<img src="c:\Users\hp\Downloads\abstract-medicine-concept-capsule-3d-treatment-modern-technology-medical-on-blue-background-image-for-wallpaper-vector.jpg" alt="Medicine Requirement" width="100">
+<h3>Medicine Requirement</h3>
+<p>Order prescribed medicines for delivery.</p>
+</div>
+<div class="card" oneclick="alert(' Request Blood  Clicked')">
+<img src="c:\Users\hp\Downloads\blood-donation-vectormedical-background_1156526-266.avif" alt="Request Blood" width="100">
+<h3>Request Blood</h3>
+<p>Request for emergency Blood Delivery.</p>
+</div>
+</section>
+
+<footer>
+<p>2026 Swast Bharat </p>
+</footer>
+</body>
+</html> 
